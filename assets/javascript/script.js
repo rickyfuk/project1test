@@ -23,6 +23,9 @@ $(document).ready(function () {
 
 		// create a div tag for the div
 		var modal2p1 = $('<p>');
+		// var randomName = generateName();
+		console.log(generateName());
+		// console.log(randomName);
 		// add html for the p tag
 		$(modal2p1).text('We have random pick a name for you');
 
@@ -34,23 +37,23 @@ $(document).ready(function () {
 	});
 
 	function generateName() {
-		var queryURL = 'https://uzby.com/api.php?min=3&max=8';
+		var queryURL =
+			'https://cors-anywhere.herokuapp.com/https://uzby.com/api.php?min=3&max=8';
+		let x = '';
+
 		$.ajax({
 			url: queryURL,
-			// url: '',
-			headers: {
-				'Access-Control-Allow-Origin': '*',
-			},
-			// // method: 'GET',
-			// type: 'POST',
-			// crossDomain: true,
-			// dataType: 'jsonp',
-			// data: jsondata,
-			type: 'dataType',
-			success: function (jsondata) {
-				console.log(jsondata);
-			},
-		});
+			async: false,
+			method: 'GET',
+		}).then(
+			(x = function (response) {
+				console.log(response);
+				console.log(typeof response);
+				return response;
+			})
+		);
+		console.log(x);
 	}
+
 	generateName();
 });
