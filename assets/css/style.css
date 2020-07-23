@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+}
+
+.reveal-overlay {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.revealStyle {
+	background-color: rgb(155, 155, 155);
+	font-family: 'Grenze Gotisch', cursive;
+	border-radius: 10px;
+	box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.5);
+}
+
+.revealStyle h1 {
+	font-family: 'Grenze Gotisch', cursive;
+}
