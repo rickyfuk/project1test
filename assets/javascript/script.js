@@ -3,6 +3,7 @@ $(document).ready(function () {
 	$(document).foundation();
 	$('#Modal1').foundation('open');
 
+	// 1. gender modal
 	$('#toModal2').click(function () {
 		event.preventDefault();
 
@@ -28,7 +29,7 @@ $(document).ready(function () {
 		$(modal2b1).addClass('button toModal3');
 		$(modal2b1).attr('id', 'maleBtn');
 		// add the data value for the button
-		$(modal2b1).attr('dataValue', 'male');
+		$(modal2b1).attr('dataValue', 'Male');
 		// add value for the button
 		$(modal2b1).text('Male');
 		// append the button to the div
@@ -40,11 +41,23 @@ $(document).ready(function () {
 		$(modal2b2).addClass('button toModal3');
 		$(modal2b2).attr('id', 'femaleBtn');
 		// add the data value for the button
-		$(modal2b2).attr('dataValue', 'female');
+		$(modal2b2).attr('dataValue', 'Female');
 		// add value for the button
 		$(modal2b2).text('Female');
 		// append the button to the div
 		$(modal2).append(modal2b2);
+
+		// create a button tag for the close button
+		var modal2b3 = $('<button>');
+		// add the class and attr for the button
+		$(modal2b3).addClass('close-button');
+		$(modal2b3).attr('data-close', '');
+		$(modal2b3).attr('aria-label', 'Close reveal');
+		$(modal2b3).attr('type', 'button');
+		// add the span for the close button
+		$(modal2b3).html('<span aria-hidden="true">&times;</span>');
+		// append the button to the div
+		$(modal2).append(modal2b3);
 
 		// close modal1
 		$('#Modal1').foundation('close');
@@ -60,6 +73,7 @@ $(document).ready(function () {
 		$('#Modal1').foundation('close');
 	});
 
+	// 2. Races modal
 	$(document).on('click', '.toModal3', function () {
 		event.preventDefault();
 		gender = $(this).attr('dataValue');
@@ -123,6 +137,18 @@ $(document).ready(function () {
 		// append the button to the div
 		$(modal3).append(modal3b3);
 
+		// create a button tag for the close button
+		var modal3b4 = $('<button>');
+		// add the class and attr for the button
+		$(modal3b4).addClass('close-button');
+		$(modal3b4).attr('data-close', '');
+		$(modal3b4).attr('aria-label', 'Close reveal');
+		$(modal3b4).attr('type', 'button');
+		// add the span for the close button
+		$(modal3b4).html('<span aria-hidden="true">&times;</span>');
+		// append the button to the div
+		$(modal2).append(modal3b4);
+
 		// close modal2
 		$('#Modal2').foundation('close');
 		// reload the foundation and open the modal3
@@ -130,11 +156,11 @@ $(document).ready(function () {
 		$('#Modal3').foundation('open');
 	});
 
+	// 3. Attrack Distance modal
 	$(document).on('click', '.toModal4', function () {
 		event.preventDefault();
 		race = $(this).attr('dataValue');
 		playerSelection.push(race);
-		console.log(playerSelection);
 
 		// create a div for the modal4
 		var modal4 = $('<div>');
@@ -194,6 +220,18 @@ $(document).ready(function () {
 		// append the button to the div
 		$(modal4).append(modal4b3);
 
+		// create a button tag for the close button
+		var modal4b4 = $('<button>');
+		// add the class and attr for the button
+		$(modal4b4).addClass('close-button');
+		$(modal4b4).attr('data-close', '');
+		$(modal4b4).attr('aria-label', 'Close reveal');
+		$(modal4b4).attr('type', 'button');
+		// add the span for the close button
+		$(modal4b4).html('<span aria-hidden="true">&times;</span>');
+		// append the button to the div
+		$(modal2).append(modal4b4);
+
 		// close modal3
 		$('#Modal3').foundation('close');
 		// reload the foundation and open the modal4
@@ -201,12 +239,11 @@ $(document).ready(function () {
 		$('#Modal4').foundation('open');
 	});
 
+	// 4. Weapons or Spells modal
 	$(document).on('click', '.toModal5', function () {
 		event.preventDefault();
-		console.log('to modal 5');
 		attackMode = $(this).attr('dataValue');
 		playerSelection.push(attackMode);
-		console.log(playerSelection);
 
 		// create a div for the modal5
 		var modal5 = $('<div>');
@@ -249,17 +286,136 @@ $(document).ready(function () {
 		// add the class and ID for the button
 		$(modal5b2).addClass('button toModal6');
 		// add the data value for the button
-		$(modal5b2).attr('dataValue', 'Spell');
+		$(modal5b2).attr('dataValue', 'Spells');
 		// add value for the button
-		$(modal5b2).text('Spell');
+		$(modal5b2).text('Spells');
 		// append the button to the div
 		$(modal5).append(modal5b2);
+
+		// create a button tag for the close button
+		var modal5b3 = $('<button>');
+		// add the class and attr for the button
+		$(modal5b3).addClass('close-button');
+		$(modal5b3).attr('data-close', '');
+		$(modal5b3).attr('aria-label', 'Close reveal');
+		$(modal5b3).attr('type', 'button');
+		// add the span for the close button
+		$(modal5b3).html('<span aria-hidden="true">&times;</span>');
+		// append the button to the div
+		$(modal2).append(modal5b3);
 
 		// close modal4
 		$('#Modal4').foundation('close');
 		// reload the foundation and open the modal5
 		$(document).foundation();
 		$('#Modal5').foundation('open');
+	});
+
+	// 5. Suggestion modal
+	$(document).on('click', '.toModal6', function () {
+		event.preventDefault();
+		weapon = $(this).attr('dataValue');
+		playerSelection.push(weapon);
+		console.log(playerSelection);
+
+		if ((playerSelection[2] = 'Either')) {
+			var suggestion = 'Rogue';
+			playerSelection.push(suggestion);
+			console.log(playerSelection[4]);
+		} else if (
+			(playerSelection[2] = 'Far') &&
+			(playerSelection[3] = 'Weapons')
+		) {
+			suggestion = 'Ranger';
+			playerSelection.push(suggestion);
+			console.log(playerSelection[4]);
+		} else if (
+			(playerSelection[2] = 'Far') &&
+			(playerSelection[3] = 'Spells')
+		) {
+			suggestion = 'Wizard';
+			playerSelection.push(suggestion);
+			console.log(playerSelection[4]);
+		} else if (
+			(playerSelection[2] = 'Close') &&
+			(playerSelection[3] = 'Weapons')
+		) {
+			suggestion = 'Fighter';
+			playerSelection.push(suggestion);
+			console.log(playerSelection[4]);
+		} else if (
+			(playerSelection[2] = 'Close') &&
+			(playerSelection[3] = 'Spells')
+		) {
+			suggestion = 'Cleric ';
+			playerSelection.push(suggestion);
+			console.log(playerSelection[4]);
+		}
+
+		// create a div for the modal6
+		var modal6 = $('<div>');
+		// add class and ID for modal6
+		$(modal6).addClass('reveal revealStyle');
+		$(modal6).attr('id', 'Modal6');
+		$(modal6).attr('data-reveal', '');
+		// append the modal5 div to mainbody
+		$('#mainBody').append(modal6);
+
+		// create a h1 for the div
+		var modal6h1 = $('<h1>');
+		// add text for the h1 tag
+		$(modal6h1).text('Our Recommendation :');
+		// append the modal6h1 to the div
+		$(modal6).append(modal6h1);
+
+		// create a p tag for the div
+		var modal6p1 = $('<p>');
+		// add class and ID for modal3
+		$(modal6p1).addClass('lead');
+		// add text for the h1 tag
+		$(modal6p1).text(
+			'You should be a "' +
+				playerSelection[0] +
+				', ' +
+				playerSelection[1] +
+				', ' +
+				playerSelection[4] +
+				' "'
+		);
+		// append the modal4h1 to the div
+		$(modal6).append(modal6p1);
+
+		// create a button tag for the video
+		var modal6b1 = $('<button>');
+		// add the class and ID for the button
+		$(modal6b1).addClass('button toModal7');
+		// add value for the button
+		$(modal6b1).text('Go to the Introduction Video');
+		// append the button to the div
+		$(modal6).append(modal6b1);
+
+		// create a button tag for the close button
+		var modal6b2 = $('<button>');
+		// add the class and attr for the button
+		$(modal6b2).addClass('close-button');
+		$(modal6b2).attr('data-close', '');
+		$(modal6b2).attr('aria-label', 'Close reveal');
+		$(modal6b2).attr('type', 'button');
+		// add the span for the close button
+		$(modal6b2).html('<span aria-hidden="true">&times;</span>');
+		// append the button to the div
+		$(modal2).append(modal6b2);
+
+		// close modal5
+		$('#Modal5').foundation('close');
+		// reload the foundation and open the modal6
+		$(document).foundation();
+		$('#Modal6').foundation('open');
+	});
+
+	// 6. video modal
+	$(document).on('click', '.toModal7', function () {
+		event.preventDefault();
 	});
 
 	function generateName() {
