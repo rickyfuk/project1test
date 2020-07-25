@@ -69,24 +69,15 @@
 			<!-- This is the first modal -->
 			<div class="reveal revealStyle" id="Modal1" data-reveal>
 				<h1>Welcome!</h1>
-				<p class="lead">Are you experience with DnD?</p>
-				<!-- <button class="button" data-close data-open="Modal2">
-					No
-				</button>
-				<button class="button" data-close data-open="Modal3">
-					Yes
-				</button>
-				<button class="button" data-close data-open="Modal4">
-					Yes, but .....
-				</button> -->
+				<p class="lead">Do you need a guidance for setting up your character</p>
 				<button id="toModal2" class="button">
-					No
-				</button>
-				<button id="close" class="button">
 					Yes
 				</button>
-				<button id="toModal8" class="button">
-					Yes, but .....
+				<button id="closeM1" class="button">
+					No
+				</button>
+				<button id="toRandom" class="button">
+					No, but please random a character for me
 				</button>
 				<button
 					class="close-button"
@@ -113,9 +104,21 @@
 
 			<div class="grid-container">
 				<div class="row">
-					<div class="grid-x columns small-12 medium-6 large-4">
-						<div class="cell shrink">Name:</div>
-						<div id="nameResult" class="cell auto">Chung Hei</div>
+					<div class="grid-x grid-padding-x columns small-12 medium-6">
+						<div id="nameTitle" class="cell small-6 text-right">
+							Your Name:
+						</div>
+						<!-- <div class="grid-container">
+							<div class="grid-x grid-padding-x"> -->
+						<div id="nameResultCell" class="cell small-6">
+							<input
+								class="medium-6"
+								id="nameResult"
+								type="text"
+								placeholder=".medium-6.cell"
+							/>
+						</div>
+						<!-- <div id="nameResult" class="cell auto">Chung Hei</div> -->
 					</div>
 					<div class="columns small-12 medium-6 large-4">
 						Hello

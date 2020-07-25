@@ -16,3 +16,35 @@
 .revealStyle h1 {
 	font-family: 'Grenze Gotisch', cursive;
 }
+
+.lead {
+	font-size: 140% !important;
+}
+
+.button {
+	border-radius: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+
+/* #Modal2 button {
+	margin-bottom: 0px;
+	margin-left: 5px;
+} */
+
+#nameTitle {
+	font-size: 1.8rem;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+#nameResultCell {
+	padding-left: 0px;
+	padding-top: 3px;
+}
+
+#nameResult {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	font-family: 'Grenze Gotisch', cursive;
+}
