@@ -1,0 +1,321 @@
+/* main container style */
+.mainContainer {
+	min-width: 950px;
+	max-width: 100%;
+}
+
+/* help button style */
+.helpButton {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+/* main body style */
+body {
+	background-image: url(northern_chimera-rotated.png);
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+/* style for the choice */
+ul {
+	justify-content: center;
+	font-size: 28px;
+}
+
+a {
+	color: black;
+}
+
+/* top row style */
+
+.topRow {
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.topStat {
+	position: relative;
+	text-align: center;
+}
+
+.topStatAsideContainer {
+	position: relative;
+}
+
+.topStatAside {
+	position: relative;
+	height: 100%;
+	max-width: 180px;
+	max-height: 180px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.topStatAsideRight {
+	position: relative;
+	height: 100%;
+	max-width: 180px;
+	max-height: 180px;
+	width: 100%;
+	margin-right: 5%;
+}
+
+.topStatText {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	padding-top: 20%;
+	text-align: center;
+}
+
+.topStatImgSide {
+	height: auto;
+	width: 100%;
+	max-width: 180px;
+	object-fit: scale-down;
+}
+
+#topBanner {
+	height: 180px;
+	width: 100%;
+	margin: auto;
+}
+
+.topBannerText {
+	position: relative;
+	bottom: 150px;
+}
+
+#nameID {
+	max-height: 180px;
+}
+
+#characterName {
+	font-size: 3.5rem;
+}
+
+.topNameText {
+	position: relative;
+	margin: auto;
+	bottom: 190px;
+}
+
+#edit-name-etc {
+	float: right;
+	margin-right: 40px;
+	background: transparent;
+	opacity: 50%;
+}
+/* top row style end */
+
+.containerLeft {
+	position: absolute;
+	left: 0;
+}
+
+.containerRight {
+	position: absolute;
+	right: 0;
+}
+
+.statDiv {
+	height: 800px;
+	width: 150px;
+	text-align: center;
+	margin-left: 126px;
+}
+
+.statDivRight {
+	height: 800px;
+	width: 150px;
+	text-align: center;
+	margin-right: 126px;
+}
+
+.sideStat {
+	padding-top: 40%;
+}
+
+.sideStatText {
+	position: relative;
+	height: 10px;
+	width: 120px;
+	margin: auto;
+	bottom: 125px;
+}
+
+#sideStatNumber {
+	position: relative;
+	height: 20px;
+	width: 100px;
+	margin: auto;
+	bottom: 50px;
+	font-size: 50px;
+}
+
+.sideStatImg {
+	position: relative;
+	height: 130px;
+	width: 150px;
+	margin: auto;
+	bottom: 60px;
+}
+
+.rightStats {
+}
+
+.containerCenterLeft {
+	position: absolute;
+	left: 285px;
+	height: 280px;
+	width: 480px;
+}
+
+.centerLeftGrid {
+	height: 280px;
+	width: 420px;
+}
+
+.containerCenterRight {
+	position: absolute;
+	right: 280px;
+	height: 280px;
+	width: 530px;
+}
+
+.centerRightGrid {
+	height: 280px;
+	width: 530px;
+}
+
+#centerBioImg {
+	height: 140px;
+	width: 430px;
+}
+
+.centerBioText {
+	box-sizing: border-box;
+	max-width: inherit;
+	max-height: inherit;
+	position: relative;
+	bottom: 130px;
+	left: 25px;
+}
+
+#centerVidImg {
+	height: 280px;
+	width: 530px;
+}
+
+.containerDice {
+	position: absolute;
+	bottom: 110px;
+	left: 380px;
+	height: 150px;
+	width: 950px;
+}
+
+#centerVidImg {
+	height: 280px;
+	width: 530px;
+}
+
+.containerDice {
+	position: absolute;
+	bottom: 110px;
+	left: 380px;
+	height: 150px;
+	width: 950px;
+}
+.diceGrid {
+	height: 100px;
+	width: 730px;
+	font-size: 80px;
+	text-align: center;
+}
+
+.diceTray {
+	border: solid;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.reveal-overlay {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.revealStyle {
+	background-color: rgb(155, 155, 155);
+	font-family: 'Grenze Gotisch', cursive;
+	border-radius: 10px;
+	box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.5);
+}
+
+.revealStyle h1 {
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+.lead {
+	font-size: 140% !important;
+}
+
+.button {
+	border-radius: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+
+#nameTitle {
+	font-size: 1.8rem;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+#nameResultCell {
+	padding-left: 0px;
+	padding-top: 3px;
+}
+
+#nameResult {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+/* For medium screen (i.e. tablets) */
+@media screen and (min-width: 640px) and (max-width: 768px) {
+	.mainContainer {
+		min-width: 380px;
+		max-width: 100%;
+	}
+}
+
+/* For small screens (i.e. phone)*/
+@media only screen and (max-width: 640px) {
+	.mainContainer {
+		min-width: 0px;
+		max-width: 100%;
+	}
+}

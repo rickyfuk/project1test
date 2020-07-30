@@ -1,7 +1,52 @@
 $(document).ready(function () {
-	var playerSelection = [];
 	$(document).foundation();
 	$('#Modal1').foundation('open');
+
+	// generate a random number function
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+	// when the user pick random
+	$('#toRandom').click(function () {
+		event.preventDefault();
+
+		// pick the gender
+		var genderNum = getRandomInt(1);
+		if (genderNum === 0) {
+			playerSelection[0] = 'Male';
+		} else {
+			playerSelection[0] = 'Female';
+		}
+
+		// pick a race
+		var raceNum = getRandomInt(2);
+		if (raceNum === 0) {
+			playerSelection[1] = 'Dwarf';
+		} else if (raceNum === 1) {
+			playerSelection[1] = 'Elf';
+		} else {
+			playerSelection[1] = 'Human';
+		}
+
+		// pick a class
+		var classNum = getRandomInt(4);
+		if (classNum === 0) {
+			playerSelection[4] = 'Cleric';
+		} else if (classNum === 1) {
+			playerSelection[4] = 'Fighter';
+		} else if (classNum === 2) {
+			playerSelection[4] = 'Rogue';
+		} else if (classNum === 3) {
+			playerSelection[4] = 'Ranger';
+		} else if (classNum === 4) {
+			playerSelection[4] = 'Wizard';
+		}
+		console.log(playerSelection);
+		saveToLocal(playerSelection);
+		// close modal1
+		$('#Modal1').foundation('close');
+	});
 
 	// 1. gender modal
 	$('#toModal2').click(function () {
@@ -91,7 +136,7 @@ $(document).ready(function () {
 		// create a h1 for the div
 		var modal3h1 = $('<h1>');
 		// add text for the h1 tag
-		$(modal3h1).text('Step 2 : Choose a Races');
+		$(modal3h1).text('Step 2 : Select a race');
 		// append the modal1h1 to the div
 		$(modal3).append(modal3h1);
 
@@ -100,7 +145,7 @@ $(document).ready(function () {
 		// add class and ID for modal3
 		$(modal3p1).addClass('lead');
 		// add text for the h1 tag
-		$(modal3p1).text('Select one of the folloiing options');
+		$(modal3p1).text('Select one of the following options');
 		// append the modal1h1 to the div
 		$(modal3).append(modal3p1);
 
@@ -183,7 +228,7 @@ $(document).ready(function () {
 		// add class and ID for modal3
 		$(modal4p1).addClass('lead');
 		// add text for the h1 tag
-		$(modal4p1).text('Do you want to attack from up close or from a distance?');
+		$(modal4p1).text('Do you want to attack from up close, or from afar?');
 		// append the modal4h1 to the div
 		$(modal4).append(modal4p1);
 
@@ -318,39 +363,45 @@ $(document).ready(function () {
 		playerSelection.push(weapon);
 		console.log(playerSelection);
 
-		if ((playerSelection[2] = 'Either')) {
+		if (playerSelection[2] === 'Either') {
 			var suggestion = 'Rogue';
 			playerSelection.push(suggestion);
 			console.log(playerSelection[4]);
+			saveToLocal(playerSelection);
 		} else if (
-			(playerSelection[2] = 'Far') &&
-			(playerSelection[3] = 'Weapons')
+			playerSelection[2] === 'Far' &&
+			playerSelection[3] === 'Weapons'
 		) {
 			suggestion = 'Ranger';
 			playerSelection.push(suggestion);
 			console.log(playerSelection[4]);
+			saveToLocal(playerSelection);
 		} else if (
-			(playerSelection[2] = 'Far') &&
-			(playerSelection[3] = 'Spells')
+			playerSelection[2] === 'Far' &&
+			playerSelection[3] === 'Spells'
 		) {
 			suggestion = 'Wizard';
 			playerSelection.push(suggestion);
 			console.log(playerSelection[4]);
+			saveToLocal(playerSelection);
 		} else if (
-			(playerSelection[2] = 'Close') &&
-			(playerSelection[3] = 'Weapons')
+			playerSelection[2] === 'Close' &&
+			playerSelection[3] === 'Weapons'
 		) {
 			suggestion = 'Fighter';
 			playerSelection.push(suggestion);
 			console.log(playerSelection[4]);
+			saveToLocal(playerSelection);
 		} else if (
-			(playerSelection[2] = 'Close') &&
-			(playerSelection[3] = 'Spells')
+			playerSelection[2] === 'Close' &&
+			playerSelection[3] === 'Spells'
 		) {
 			suggestion = 'Cleric ';
 			playerSelection.push(suggestion);
 			console.log(playerSelection[4]);
+			saveToLocal(playerSelection);
 		}
+		console.log(playerSelection);
 
 		// create a div for the modal6
 		var modal6 = $('<div>');
@@ -413,22 +464,73 @@ $(document).ready(function () {
 		$('#Modal6').foundation('open');
 	});
 
+	//set Race and Class to Local Storage
+	function saveToLocal(playerSelection) {
+		localStorage.setItem('charGender', playerSelection[0]);
+		localStorage.setItem('charRace', playerSelection[1]);
+		localStorage.setItem('charRange', playerSelection[2]);
+		localStorage.setItem('charStyle', playerSelection[3]);
+		localStorage.setItem('charClass', playerSelection[4]);
+	}
+
 	// 6. video modal
 	$(document).on('click', '.toModal7', function () {
 		event.preventDefault();
+
+		// create a div for the modal7
+		var modal7 = $('<div>');
+		// add class and ID for modal7
+		$(modal7).addClass('reveal revealStyle');
+		$(modal7).attr('id', 'Modal7');
+		$(modal7).attr('data-reveal', '');
+		// append the modal5 div to mainbody
+		$('#mainBody').append(modal7);
+
+		// add the span for the close button
+		$(modal7).html(
+			'<iframe id="player" type="text/html" width="560" height="340" src="" frameborder="0"></iframe>'
+		);
+
+		//var queryURL =
+		// 	'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCRDVE5L1LTWhmPAKKbUBGtg&maxResults=25&q=' +
+		// 	playerSelection[4] +
+		// 	'%20crap%20guide&key=AIzaSyC_UlZBmubS3WD0gdVgovaHxaMb9FFgIMM';
+
+		// $.ajax({
+		// 	url: queryURL,
+		// 	method: 'GET',
+		// })
+		// .then(function (response) {
+		// 	selectedVideo = response.items[0].id.videoId;
+
+		// 	function youTubeReady() {
+		// 		$('#player').attr(
+		// 			'src',
+		// 			'http://www.youtube.com/embed/' +
+		// 				selectedVideo +
+		// 				'?enablejsapi=1&origin=http://example.com'
+		// 		);
+		// 	}
+
+		// 	youTubeReady();
+		// });
+
+		// create a button tag for the close button
+		var modal7b1 = $('<button>');
+		// add the class and attr for the button
+		$(modal7b1).addClass('close-button');
+		$(modal7b1).attr('data-close', '');
+		$(modal7b1).attr('aria-label', 'Close reveal');
+		$(modal7b1).attr('type', 'button');
+		// add the span for the close button
+		$(modal7b1).html('<span aria-hidden="true">&times;</span>');
+		// append the button to the div
+		$(modal7).append(modal7b1);
+
+		// close modal6
+		$('#Modal6').foundation('close');
+		// reload the foundation and open the modal6
+		$(document).foundation();
+		$('#Modal7').foundation('open');
 	});
-
-	function generateName() {
-		var queryURL =
-			'https://cors-anywhere.herokuapp.com/https://uzby.com/api.php?min=3&max=8';
-
-		$.ajax({
-			url: queryURL,
-			method: 'GET',
-		}).then(function (response) {
-			console.log(response);
-			$('#nameResult').val(response);
-		});
-	}
-	generateName();
 });

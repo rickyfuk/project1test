@@ -1,0 +1,362 @@
+.mainContainer {
+	min-width: 950px;
+	max-width: 100%;
+}
+
+.helpButton {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+body {
+	background-image: url(northern_chimera-rotated.png);
+	font-family: 'Grenze Gotisch', cursive;
+	background-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+.topRow {
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.topStat {
+	position: relative;
+	text-align: center;
+}
+
+.topStatAsideContainer {
+	position: relative;
+}
+
+.topStatAside {
+	position: relative;
+	height: 100%;
+	max-width: 180px;
+	max-height: 180px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.topStatAsideRight {
+	position: relative;
+	height: 100%;
+	max-width: 180px;
+	max-height: 180px;
+	width: 100%;
+	margin-right: 5%;
+}
+
+.topStatText {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	padding-top: 20%;
+	text-align: center;
+}
+
+/* make some change */
+.topStatImgSide {
+	height: auto;
+	width: 100%;
+	max-width: 180px;
+	object-fit: scale-down;
+}
+
+#topBanner {
+	height: 180px;
+	width: 100%;
+	margin: auto;
+}
+
+.topBannerText {
+	position: relative;
+	bottom: 150px;
+}
+
+#nameID {
+	max-height: 180px;
+}
+
+#characterName {
+	font-size: 3.5rem;
+}
+
+.topNameText {
+	position: relative;
+	margin: auto;
+	bottom: 190px;
+}
+
+#edit-name-etc {
+	float: right;
+	margin-right: 40px;
+	background: transparent;
+	opacity: 50%;
+}
+
+/* 1st merge end */
+
+.secondRow {
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.statDiv {
+	text-align: center;
+	padding-right: 10px;
+}
+
+.sideStat {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.sideStatText {
+	position: absolute;
+	width: 100%;
+	padding-left: auto;
+	padding-right: auto;
+	bottom: 25%;
+	font-size: 20px;
+}
+
+.sideStatNumber {
+	font-size: 2.5rem;
+}
+
+.sideStatImg {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	bottom: 45px;
+	right: 20px;
+}
+
+/* .centerRightGrid {
+	position: relative;
+	left: -35%;
+	bottom: 25px;
+}
+
+#centerBioImg {
+	height: 170px;
+	width: 430px;
+}
+
+.centerBioText {
+	box-sizing: border-box;
+	max-width: 200px;
+	max-height: inherit;
+	position: relative;
+	bottom: 150px;
+	left: 25px;
+	font-size: 15px;
+}
+
+.centerBioTextRight {
+	box-sizing: border-box;
+	max-width: 200px;
+	max-height: inherit;
+	position: relative;
+	bottom: 350px;
+	left: 25px;
+	font-size: 15px;
+}
+
+#centerVidImg {
+	height: 380px;
+	width: 430px;
+} */
+
+.thirdRow {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.containerDice {
+	bottom: 110px;
+	left: 380px;
+	height: 150px;
+	width: 950px;
+}
+
+.grid-container.full {
+	display: flex;
+	justify-content: center;
+}
+
+.diceGrid {
+	height: 100px;
+	width: 730px;
+	font-size: 80px;
+	text-align: center;
+}
+
+.diceTray1 {
+	border-left: solid;
+	border-top: solid;
+	border-bottom: solid;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.diceTray2 {
+	border-right: solid;
+	border-top: solid;
+	border-bottom: solid;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.reveal-overlay {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.revealStyle {
+	background-color: rgb(155, 155, 155);
+	font-family: 'Grenze Gotisch', cursive;
+	border-radius: 10px;
+	box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.5);
+}
+
+.revealStyle h1 {
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+.lead {
+	font-size: 140% !important;
+}
+
+.button {
+	border-radius: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+
+#nameTitle {
+	font-size: 1.8rem;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+#nameResultCell {
+	padding-left: 0px;
+	padding-top: 3px;
+}
+
+#nameResult {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+/* For tablets */
+@media screen and (min-width: 640px) and (max-width: 768px) {
+	.mainContainer {
+		min-width: 380px;
+		max-width: 100%;
+	}
+}
+/* .containerCenterRight {
+		position: absolute;
+		top: 380px;
+		left: 280px;
+		height: 149px;
+		width: 465px;
+	}
+
+	.centerRightGrid {
+		height: 190px;
+		width: 465px;
+	}
+
+	#centerBioImg {
+		height: 100px;
+		width: 465px;
+	}
+
+	#centerVidImg {
+		height: 190px;
+		width: 465px;
+	}
+
+	.containerDice {
+		position: absolute;
+		top: 580px;
+		left: 150px;
+		height: 150px;
+		width: 950px;
+	} */
+
+/* Ipads */
+
+/* To resize for smaller screens */
+
+@media only screen and (max-width: 640px) {
+	.mainContainer {
+		min-width: 0px;
+		max-width: 100%;
+	}
+	/* 
+	.centerLeftGrid {
+		position: relative;
+		left: -10%;
+		bottom: 0;
+	}
+
+	.centerBioText {
+		max-width: 340px;
+	}
+
+	.centerBioTextRight {
+		left: 115px;
+		max-width: 300px;
+	}
+
+	#centerVidImg {
+		position: relative;
+		right: -85px;
+	}
+
+	.rightStatDiv {
+		text-align: center;
+		position: relative;
+		left: 0%;
+	}
+
+	.diceGrid {
+		height: 100px;
+		max-width: 250px;
+		font-size: 80px;
+		text-align: center;
+	} */
+}
+
+/* For tiny screens like S5/Moto G4 */
+/* @media only screen and (max-width: 360px) {} */
