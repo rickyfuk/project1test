@@ -195,6 +195,38 @@ h3 {
 	object-fit: cover;
 }
 
+.skillDiv {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.skillImage {
+	height: 100%;
+}
+
+.skillText {
+	width: 90%;
+	position: absolute;
+	top: 5%;
+}
+
+.spellEquDiv {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.spellEquImage {
+	height: 100%;
+}
+
+.spellEquText {
+	width: 90%;
+	position: absolute;
+	top: 5%;
+}
+
 /* third row end */
 
 /* second & forth row begin  */
