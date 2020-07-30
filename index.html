@@ -59,16 +59,21 @@
 						<div class="grid-x topBannerText">
 							<div class="cell">
 								<h1 contenteditable="false" id="characterName">Humberferg</h1>
-								<div class="grid-x">
-									<div class="cell small-4">
-										<h3><span id="gender">Female</span></h3>
-									</div>
-									<div class="cell small-4">
-										<h3><span id="race">Dwarf</span></h3>
-									</div>
-									<div class="cell small-4">
-										<h3><span id="class">Cleric</span></h3>
-									</div>
+								<div class="grid-namebanner">
+									<ul id="addDrop" class="dropdown menu">
+										<li id="removeGender">
+											<a id="gender" href="#">Female</a>
+											<ul id="genderUL" class="menu"></ul>
+										</li>
+										<li id="removeRace">
+											<a id="race" href="#">Dwarf</a>
+											<ul id="raceUL" class="menu"></ul>
+										</li>
+										<li id="removeClass">
+											<a id="class" href="#">Cleric</a>
+											<ul id="classUL" class="menu"></ul>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -130,9 +135,35 @@
 				</div>
 				<br />
 				<!-- end of help button -->
-
 				<!-- 2nd row -->
-				<div class="grid-x secondRow">
+				<div class="grid-x diceRow secondRow">
+					<!-- Dice roller -->
+					<div class="containerDice grid-container full">
+						<div class="grid-x diceGrid">
+							<div
+								class="medium-6 small-12 diceTray1"
+								style="background: khaki;"
+							>
+								<i id="dice4" class="df-d4-4"></i>
+								<i id="dice6" class="df-d6-6"></i>
+								<i id="dice8" class="df-d8-8"></i>
+							</div>
+							<div
+								class="medium-6 small-12 diceTray2"
+								style="background: khaki;"
+							>
+								<i id="dice10" class="df-d10-10"></i>
+								<i id="dice12" class="df-d12-12"></i>
+								<i id="dice20" class="df-d20-20"></i>
+							</div>
+						</div>
+					</div>
+					<!-- End Diceroller container -->
+				</div>
+				<!-- end of second row -->
+
+				<!-- 3rd row -->
+				<div class="grid-x thirdRow">
 					<!-- Left side stats -->
 					<!-- 1st column **stat part 1-->
 					<div class="cell small-6 medium-3 large-2 statDiv">
@@ -219,14 +250,15 @@
 						<div class="grid-x">
 							<!-- left side of the center container -->
 							<div class="containerCenterLeft cell large-6">
-								<div class="cell shortBio">
+								<div class="cell vidImageDiv">
 									<img
 										src="assets\front-end-images\tornpaperbackground.png"
-										id="centerBioImg"
+										id="centerVidImg"
+										class="vidImage"
 									/>
-									<div class="centerBioText">
+									<!-- <div class="centerBioText">
 										<p>A short bio maybe</p>
-									</div>
+									</div> -->
 								</div>
 								<div class="cell placeholder">
 									<img
@@ -242,16 +274,43 @@
 							<div class="containerCenterRight cell large-6 centerBioRight">
 								<img
 									src="assets\front-end-images\tornpaperbackground.png"
-									id="centerVidImg"
+									id="centerBioImg"
 								/>
 								<div class="centerBioTextRight">
-									<p>A picture/video maybe</p>
+									<p>Spell and Equipment</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- End of second row -->
 				</div>
+				<!-- End of third row -->
+
+				<!-- 4th row -->
+				<div class="grid-x diceRow forthRow">
+					<!-- Dice roller -->
+					<div class="containerDice grid-container full">
+						<div class="grid-x diceGrid">
+							<div
+								class="medium-6 small-12 diceTray1"
+								style="background: khaki;"
+							>
+								<i id="dice4" class="df-d4-4"></i>
+								<i id="dice6" class="df-d6-6"></i>
+								<i id="dice8" class="df-d8-8"></i>
+							</div>
+							<div
+								class="medium-6 small-12 diceTray2"
+								style="background: khaki;"
+							>
+								<i id="dice10" class="df-d10-10"></i>
+								<i id="dice12" class="df-d12-12"></i>
+								<i id="dice20" class="df-d20-20"></i>
+							</div>
+						</div>
+					</div>
+					<!-- End Diceroller container -->
+				</div>
+				<!-- end of forth row -->
 			</div>
 		</main>
 		<!-- Foundation JS -->
