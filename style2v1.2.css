@@ -1,0 +1,389 @@
+/* main container style */
+.mainContainer {
+	min-width: 950px;
+	max-width: 100%;
+}
+
+/* help button style */
+.helpButton {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+/* main body style */
+body {
+	background-image: url(northern_chimera-rotated.png);
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+/* style for the choice */
+.grid-namebanner {
+	justify-content: center;
+}
+
+.grid-namebanner ul {
+	justify-content: center;
+	font-size: 28px;
+}
+
+.grid-namebanner a {
+	color: black;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+	border-color: black transparent transparent;
+}
+
+/* top row style */
+
+.topRow {
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.topStat {
+	position: relative;
+	text-align: center;
+}
+
+.topStatAsideContainer {
+	position: relative;
+}
+
+.topStatAside {
+	position: relative;
+	height: 100%;
+	max-width: 180px;
+	max-height: 180px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.topStatAsideRight {
+	position: relative;
+	height: 100%;
+	max-width: 180px;
+	max-height: 180px;
+	width: 100%;
+	margin-right: 5%;
+}
+
+.topStatText {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	padding-top: 20%;
+	text-align: center;
+}
+
+.topStatImgSide {
+	height: auto;
+	width: 100%;
+	max-width: 180px;
+	object-fit: scale-down;
+}
+
+#topBanner {
+	height: 180px;
+	width: 100%;
+	margin: auto;
+}
+
+.topBannerText {
+	position: relative;
+	bottom: 150px;
+}
+
+#nameID {
+	max-height: 180px;
+}
+
+#characterName {
+	font-size: 3.5rem;
+}
+
+.topNameText {
+	position: relative;
+	margin: auto;
+	bottom: 190px;
+}
+
+#edit-name-etc {
+	float: right;
+	margin-right: 40px;
+	background: transparent;
+	opacity: 50%;
+}
+/* 1st row end */
+
+/* third row begin */
+.thirdRow {
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.statDiv {
+	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.sideStat {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.sideStatText {
+	position: absolute;
+	width: 100%;
+	padding-left: auto;
+	padding-right: auto;
+	bottom: 25%;
+	font-size: 20px;
+}
+
+.sideStatNumber {
+	font-size: 2.5rem;
+}
+
+.sideStatImg {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	bottom: 45px;
+	right: 20px;
+}
+
+.centerBioImage {
+	padding-left: auto;
+	padding-right: auto;
+	max-width: 100%;
+	max-height: 200px;
+}
+
+.vidImageDiv {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+#centerVidImg {
+	max-height: 300px;
+	max-width: 300px;
+	object-fit: cover;
+}
+
+.skillDiv {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.skillImage {
+	height: 100%;
+}
+
+.skillText {
+	width: 90%;
+	position: absolute;
+	top: 5%;
+}
+
+.spellEquDiv {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.spellEquImage {
+	height: 100%;
+}
+
+.spellEquText {
+	width: 90%;
+	position: absolute;
+	top: 5%;
+}
+
+/* third row end */
+
+/* second & forth row begin  */
+.secondRow {
+	display: none;
+}
+
+.diceRow {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.containerDice {
+	min-height: 150px;
+	width: 950px;
+}
+
+.grid-container.full {
+	display: flex;
+	justify-content: center;
+}
+
+.diceGrid {
+	height: 100px;
+	width: 730px;
+	font-size: 80px;
+	text-align: center;
+}
+
+.diceTray1 {
+	border-left: solid;
+	border-top: solid;
+	border-bottom: solid;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.diceTray2 {
+	border-right: solid;
+	border-top: solid;
+	border-bottom: solid;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+/* second & forth row end */
+
+* {
+	box-sizing: border-box;
+}
+
+.reveal-overlay {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.revealStyle {
+	background-color: rgb(155, 155, 155);
+	font-family: 'Grenze Gotisch', cursive;
+	border-radius: 10px;
+	box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.5);
+}
+
+.revealStyle h1 {
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+.lead {
+	font-size: 140% !important;
+}
+
+.button {
+	border-radius: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+
+#nameTitle {
+	font-size: 1.8rem;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+#nameResultCell {
+	padding-left: 0px;
+	padding-top: 3px;
+}
+
+#nameResult {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	font-family: 'Grenze Gotisch', cursive;
+}
+
+/* For tablets */
+@media screen and (min-width: 640px) and (max-width: 768px) {
+	.mainContainer {
+		min-width: 380px;
+		max-width: 100%;
+	}
+
+	.topRow {
+		margin-bottom: 20px;
+	}
+
+	.secondRow {
+		display: block;
+	}
+
+	.forthRow {
+		display: none;
+	}
+}
+
+/* To resize for smaller screens */
+
+@media only screen and (max-width: 640px) {
+	.mainContainer {
+		min-width: 0px;
+		max-width: 100%;
+	}
+
+	.reveal button {
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	.topRow {
+		margin-bottom: 20px;
+	}
+
+	.secondRow {
+		display: block;
+	}
+
+	.containerDice {
+		min-height: 280px;
+		width: 950px;
+	}
+
+	.forthRow {
+		display: none;
+	}
+
+	.diceTray1 {
+		border-left: solid;
+		border-top: solid;
+		border-bottom: solid;
+		border-right: solid;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.diceTray2 {
+		border-right: solid;
+		border-bottom: solid;
+		border-left: solid;
+		display: flex;
+		justify-content: space-evenly;
+	}
+}
